@@ -64,7 +64,6 @@ pipeline {
                 cd ./trio-base
                 git pull
                 cd ./k8s
-                kubectl apply -f .
                 kubectl rollout restart deployment --namespace=pre-prod flask-deployment
                 '''
             }
